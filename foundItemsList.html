@@ -1,9 +1,0 @@
-<div class="item-list">
-  <ol>
-    <li ng-repeat="item in itemsDirectiveCtrl.items">
-      {{ item.name }}, {{ item.short_name }}, {{ item.description }}
-      <button class="btn btn-danger" ng-click="itemsDirectiveCtrl.onRemove({index: $index});">Don't want this one!</button>
-    </li>
-  </ol>
-  <div class = "emptyMessage" ng-if = "itemsDirectiveCtrl.areItemsFound()" class="message">Nothing found</div>
-</div>
