@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div ng-if="myInfoCtrl.userData === undefined">
+    Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now !</a>
+  </div>
+
+  <table id="user-info-table" ng-if="myInfoCtrl.userData !== undefined" class="table">
+    <tr>
+      <td>First name: </td>
+      <td>{{myInfoCtrl.userData.firstName}}</td>
+    </tr>
+    <tr>
+      <td>Last name: </td>
+      <td>{{myInfoCtrl.userData.lastName}}</td>
+    </tr>
+    <tr>
+      <td>Email: </td>
+      <td>{{myInfoCtrl.userData.email}}</td>
+    </tr>
+    <tr>
+      <td>Phone: </td>
+      <td>{{myInfoCtrl.userData.phone}}</td>
+    </tr>
+    <tr>
+      <td>Favourite: </td>
+      <td><menu-item menu-item="myInfoCtrl.userData.favouriteMenuItem"></menu-item></td>
+    </tr>
+  </table>
+
+</div>
